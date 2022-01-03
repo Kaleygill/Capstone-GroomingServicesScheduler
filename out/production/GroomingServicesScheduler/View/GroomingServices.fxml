@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="420.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GroomingSevicesController">
+   <children>
+      <TableView fx:id="groomingTbl" layoutX="37.0" layoutY="56.0" prefHeight="302.0" prefWidth="588.0">
+        <columns>
+          <TableColumn fx:id="groomingIDCol" prefWidth="91.0" text="Grooming ID" />
+          <TableColumn fx:id="serviceNameCol" prefWidth="88.0" text="Service Name" />
+            <TableColumn fx:id="descCol" prefWidth="170.5" text="Description" />
+            <TableColumn fx:id="priceCol" prefWidth="110.5" text="Price" />
+            <TableColumn fx:id="typeCol" prefWidth="98.0" text="Type" />
+        </columns>
+      </TableView>
+      <Button layoutX="37.0" layoutY="368.0" minWidth="55.0" mnemonicParsing="false" onAction="#addBtn" text="Add Service" />
+      <Button layoutX="122.0" layoutY="368.0" mnemonicParsing="false" onAction="#updateBtn" text="Update Service" />
+      <Button layoutX="226.0" layoutY="368.0" minWidth="55.0" mnemonicParsing="false" onAction="#deleteBtn" text="Delete Service" />
+      <Button layoutX="558.0" layoutY="368.0" minWidth="55.0" mnemonicParsing="false" onAction="#backBtn" text="Back" />
+      <Label layoutX="235.0" layoutY="15.0" text="Grooming Services">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
+      <Label layoutX="450.0" layoutY="15.0" text="Search:" />
+      <TextField fx:id="searchField" layoutX="498.0" layoutY="11.0" promptText="Grooming ID, Name, Type" />
+   </children>
+</AnchorPane>

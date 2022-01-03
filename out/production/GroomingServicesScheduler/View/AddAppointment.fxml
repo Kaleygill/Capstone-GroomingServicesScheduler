@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="811.0" prefWidth="629.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddAppointmentController">
+   <children>
+      <Label layoutX="199.0" layoutY="22.0" text="Add Appointments">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="166.0" text="Description:" />
+      <Label layoutX="18.0" layoutY="241.0" text="Type:" />
+      <Label layoutX="333.0" layoutY="241.0" text="End Time:" />
+      <Label layoutX="20.0" layoutY="201.0" text="Location:" />
+      <Label layoutX="22.0" layoutY="282.0" text="Customer ID:" />
+      <Label layoutX="335.0" layoutY="89.0" text="User ID:" />
+      <Label layoutX="333.0" layoutY="203.0" text="Start Time:" />
+      <Label layoutX="335.0" layoutY="128.0" text="Groomer Name:" />
+      <Label layoutX="20.0" layoutY="127.0" text="Title:" />
+      <Label layoutX="21.0" layoutY="88.0" text="Appointment ID:" />
+      <TextField fx:id="aIDTxt" disable="true" layoutX="146.0" layoutY="84.0" promptText="Auto Generated" />
+      <TextField fx:id="titleTxt" layoutX="146.0" layoutY="123.0" promptText="Title" />
+      <TextField fx:id="descTxt" layoutX="146.0" layoutY="162.0" promptText="Description" />
+      <ComboBox fx:id="contactTxt" layoutX="435.0" layoutY="124.0" prefWidth="150.0" />
+      <Button fx:id="addBtn" layoutX="459.0" layoutY="731.0" mnemonicParsing="false" onAction="#addBtn" text="Save" />
+      <Button fx:id="cancelBtn" layoutX="551.0" layoutY="731.0" mnemonicParsing="false" onAction="#cancelBtn" text="Cancel" />
+      <ComboBox fx:id="typeCB" layoutX="146.0" layoutY="237.0" prefWidth="150.0" />
+      <Label layoutX="333.0" layoutY="166.0" text="Date:" />
+      <DatePicker fx:id="date" layoutX="436.0" layoutY="162.0" prefHeight="25.0" prefWidth="149.0" />
+      <ComboBox fx:id="customer" layoutX="146.0" layoutY="278.0" prefWidth="150.0" />
+      <ComboBox fx:id="user" layoutX="436.0" layoutY="85.0" prefWidth="150.0" />
+      <ComboBox fx:id="endTime" layoutX="435.0" layoutY="237.0" prefWidth="150.0" />
+      <Label fx:id="error" layoutX="64.0" layoutY="357.0" prefHeight="17.0" prefWidth="183.0" />
+      <ComboBox fx:id="startTime" layoutX="436.0" layoutY="197.0" onAction="#startTimeCB" prefWidth="150.0" />
+      <TextField fx:id="locTxt" layoutX="146.0" layoutY="199.0" promptText="Location" />
+      <RadioButton fx:id="dogServices" layoutX="174.0" layoutY="329.0" mnemonicParsing="false" onAction="#dogServicesBtn" text="Dog Grooming Services">
+         <toggleGroup>
+            <ToggleGroup fx:id="grooomingTG" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="catServices" layoutX="22.0" layoutY="357.0" mnemonicParsing="false" onAction="#catServicesBtn" text="Cat Grooming Services" toggleGroup="$grooomingTG" />
+      <TableView fx:id="groomingTbl1" layoutX="22.0" layoutY="396.0" prefHeight="141.0" prefWidth="581.0">
+        <columns>
+          <TableColumn fx:id="groomingIDCol1" prefWidth="88.5" text="GroomingID" />
+          <TableColumn fx:id="nameCol1" prefWidth="118.5" text="Service Name " />
+            <TableColumn fx:id="descCol1" prefWidth="166.0" text="Description" />
+            <TableColumn fx:id="typeCol1" prefWidth="136.5" text="Type" />
+            <TableColumn fx:id="priceCol1" prefWidth="70.5" text="Price" />
+        </columns>
+      </TableView>
+      <TableView fx:id="groomingTbl2" layoutX="22.0" layoutY="590.0" prefHeight="134.0" prefWidth="581.0">
+        <columns>
+          <TableColumn fx:id="groomingIDCol2" prefWidth="75.0" text="GroomingID" />
+          <TableColumn fx:id="nameCol2" prefWidth="122.5" text="Service Name" />
+            <TableColumn fx:id="descCol2" prefWidth="192.5" text="Description" />
+            <TableColumn fx:id="typeCol2" prefWidth="133.0" text="Type" />
+            <TableColumn fx:id="priceCol2" prefWidth="57.0" text="Price" />
+        </columns>
+      </TableView>
+      <RadioButton fx:id="horseServices" layoutX="174.0" layoutY="357.0" mnemonicParsing="false" onAction="#horseServiceBtn" text="Horse Grooming Services" toggleGroup="$grooomingTG" />
+      <RadioButton fx:id="allServices" layoutX="20.0" layoutY="329.0" mnemonicParsing="false" onAction="#allServicesBtn" selected="true" text="All Grooming Services" toggleGroup="$grooomingTG" />
+      <Button layoutX="24.0" layoutY="546.0" mnemonicParsing="false" onAction="#addServiceBtn" text="Add Grooming Service" />
+      <Button layoutX="24.0" layoutY="731.0" mnemonicParsing="false" onAction="#deleteServiceBtn" text="Delete Grooming Service" />
+   </children>
+</AnchorPane>
