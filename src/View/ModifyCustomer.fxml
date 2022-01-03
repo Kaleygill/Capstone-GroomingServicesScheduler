@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ModifyCustomerController">
+   <children>
+      <Button fx:id="modBtn" layoutX="430.0" layoutY="365.0" mnemonicParsing="false" onAction="#saveBtn" text="Save" />
+      <Button fx:id="cancelBtn" layoutX="499.0" layoutY="365.0" mnemonicParsing="false" onAction="#cancelBtn" text="Cancel" />
+      <Label layoutX="221.0" layoutY="31.0" text="Modify Customer">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="126.0" text="Customer ID" />
+      <Label layoutX="19.0" layoutY="165.0" text="Customer Name" />
+      <Label layoutX="19.0" layoutY="208.0" text="Address" />
+      <Label layoutX="19.0" layoutY="251.0" text="Postal Code" />
+      <Label layoutX="19.0" layoutY="296.0" text="Phone" />
+      <TextField fx:id="modCusIDTxt" disable="true" editable="false" layoutX="113.0" layoutY="125.0" promptText="Disabled" />
+      <TextField fx:id="modNameTxt" layoutX="113.0" layoutY="164.0" promptText="John Doe" />
+      <TextField fx:id="modAddressTxt" layoutX="113.0" layoutY="207.0" prefHeight="25.0" prefWidth="240.0" promptText="123 ABC Street, White Plains" />
+      <TextField fx:id="modPostalTxt" layoutX="113.0" layoutY="250.0" promptText="Postal Code" />
+      <TextField fx:id="modPhoneTxt" layoutX="113.0" layoutY="295.0" promptText="Phone" />
+      <ComboBox fx:id="modDivisionCB" layoutX="431.0" layoutY="156.0" prefWidth="150.0" />
+      <ComboBox fx:id="modCountryCB" layoutX="431.0" layoutY="120.0" onAction="#countryCB" prefWidth="150.0" />
+      <Label layoutX="337.0" layoutY="160.0" text="Division ID" />
+      <Label layoutX="337.0" layoutY="124.0" text="Division" />
+      <Label fx:id="error" layoutX="59.0" layoutY="357.0" prefHeight="17.0" prefWidth="199.0" />
+   </children>
+</AnchorPane>

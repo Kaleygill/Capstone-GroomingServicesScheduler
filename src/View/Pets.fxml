@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="507.0" prefWidth="832.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PetsController">
+   <children>
+      <TableView fx:id="petsTbl" layoutX="45.0" layoutY="89.0" prefHeight="313.0" prefWidth="749.0">
+        <columns>
+          <TableColumn fx:id="petIDCol" prefWidth="75.0" text="Pet ID" />
+          <TableColumn fx:id="petNameCol" prefWidth="75.0" text="Pet Name" />
+            <TableColumn fx:id="breedCol" prefWidth="75.0" text="Breed" />
+            <TableColumn fx:id="colorCol" prefWidth="101.5" text="Color" />
+            <TableColumn fx:id="weightCol" prefWidth="89.5" text="Weight" />
+            <TableColumn fx:id="cusIDCol" prefWidth="99.5" text="Customer ID" />
+            <TableColumn fx:id="notesCol" prefWidth="117.5" text="Notes" />
+            <TableColumn fx:id="horseCol" prefWidth="115.0" text="Has Horse Shoes?" visible="false" />
+        </columns>
+      </TableView>
+      <Button layoutX="45.0" layoutY="414.0" minWidth="80.0" mnemonicParsing="false" onAction="#addBtn" text="Add Pet" />
+      <Button layoutX="141.0" layoutY="414.0" minWidth="80.0" mnemonicParsing="false" onAction="#updateBtn" text="Update Pet" />
+      <Button layoutX="236.0" layoutY="414.0" minWidth="80.0" mnemonicParsing="false" onAction="#deleteBtn" text="Delete Pet" />
+      <Label fx:id="customerLabel" layoutX="341.0" layoutY="29.0" text="Customers Pets">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
+      <Button layoutX="599.0" layoutY="414.0" minWidth="80.0" mnemonicParsing="false" onAction="#backBtn" text="Back" />
+      <RadioButton fx:id="petRadio" layoutX="203.0" layoutY="54.0" mnemonicParsing="false" onAction="#petRadio" selected="true" text="Dogs and Cats">
+         <toggleGroup>
+            <ToggleGroup fx:id="tg" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="horseRadio" layoutX="556.0" layoutY="54.0" mnemonicParsing="false" onAction="#horseRadio" text="Horses" toggleGroup="$tg" />
+   </children>
+</AnchorPane>

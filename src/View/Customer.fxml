@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="648.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomerController">
+   <children>
+      <TableView fx:id="customersTbl" layoutX="40.0" layoutY="112.0" prefHeight="333.0" prefWidth="837.0">
+        <columns>
+          <TableColumn fx:id="cusIDCol" prefWidth="86.33332824707031" text="Customer ID" />
+          <TableColumn fx:id="cusNameCol" prefWidth="110.16667175292969" text="Customer Name" />
+            <TableColumn fx:id="cusAddressCol" prefWidth="154.3333282470703" text="Address" />
+            <TableColumn fx:id="cusPostalCol" prefWidth="122.66668701171875" text="Postal Code" />
+            <TableColumn fx:id="cusPhoneCol" prefWidth="119.83331298828125" text="Phone" />
+            <TableColumn fx:id="cusDivCol" prefWidth="120.3333740234375" text="Division ID" />
+            <TableColumn fx:id="cusCountryCol" prefWidth="124.5" text="Division" />
+        </columns>
+      </TableView>
+      <Button fx:id="addBtn" layoutX="62.0" layoutY="495.0" mnemonicParsing="false" onAction="#addBtn" text="Add Customer" />
+      <Button fx:id="updateBtn" layoutX="180.0" layoutY="495.0" mnemonicParsing="false" onAction="#updateBtn" text="Update Customer" />
+      <Button fx:id="deleteBtn" layoutX="314.0" layoutY="495.0" mnemonicParsing="false" onAction="#deleteBtn" text="Delete Customer" />
+      <Button fx:id="exitBtn" layoutX="829.0" layoutY="495.0" mnemonicParsing="false" onAction="#exitBtn" text="Back" />
+      <Label layoutX="404.0" layoutY="44.0" text="Customers">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="error" layoutX="91.0" layoutY="455.0" prefHeight="17.0" prefWidth="214.0" />
+      <Button layoutX="445.0" layoutY="495.0" mnemonicParsing="false" onAction="#viewPetsBtn" text="View Pets" />
+      <TextField fx:id="searchField" layoutX="728.0" layoutY="14.0" promptText="ID, Name,  Div ID, Postal..." />
+      <Label layoutX="681.0" layoutY="18.0" text="Search:" />
+   </children>
+</AnchorPane>

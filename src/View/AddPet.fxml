@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="468.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddPetController">
+   <children>
+      <Button fx:id="addBtn" layoutX="440.0" layoutY="408.0" mnemonicParsing="false" onAction="#saveBtn" text="Save" />
+      <Button fx:id="cancelBtn" layoutX="509.0" layoutY="408.0" mnemonicParsing="false" onAction="#cancelBtn" text="Cancel" />
+      <Label layoutX="260.0" layoutY="36.0" text="Add Pet">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="130.0" text="PetID:" />
+      <Label layoutX="24.0" layoutY="169.0" text="Pet Name:" />
+      <Label layoutX="24.0" layoutY="212.0" text="Pet Breed:" />
+      <Label layoutX="342.0" layoutY="166.0" text="Pet Color:" />
+      <Label layoutX="342.0" layoutY="212.0" text="Pet Weight:" />
+      <TextField fx:id="addIDTxt" disable="true" editable="false" layoutX="96.0" layoutY="130.0" promptText="Auto Generated" />
+      <TextField fx:id="addNameTxt" layoutX="96.0" layoutY="169.0" promptText="Skipper" />
+      <TextField fx:id="addBreedTxt" layoutX="96.0" layoutY="212.0" prefHeight="25.0" prefWidth="149.0" promptText="French BullDog" />
+      <TextField fx:id="addColorText" layoutX="436.0" layoutY="165.0" promptText="Blue Merle" />
+      <TextField fx:id="addWeightTxt" layoutX="436.0" layoutY="211.0" promptText="20 lbs" />
+      <ComboBox fx:id="customerCB" layoutX="436.0" layoutY="124.0" prefWidth="150.0" />
+      <Label layoutX="24.0" layoutY="289.0" text=" Notes:" />
+      <Label layoutX="342.0" layoutY="128.0" text="Customer Name:" />
+      <Label fx:id="error" layoutX="64.0" layoutY="361.0" prefHeight="17.0" prefWidth="199.0" />
+      <TextArea fx:id="addNotesTxt" layoutX="81.0" layoutY="289.0" prefHeight="102.0" prefWidth="513.0" />
+      <RadioButton fx:id="petRadioBtn" layoutX="142.0" layoutY="70.0" mnemonicParsing="false" onAction="#petRadioBtn" selected="true" text="Cat/Dog">
+         <toggleGroup>
+            <ToggleGroup fx:id="petTG" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="horseRadioBtn" layoutX="351.0" layoutY="70.0" mnemonicParsing="false" onAction="#horseRadioBtn" text="Horse" toggleGroup="$petTG" />
+      <Label layoutX="213.0" layoutY="255.0" />
+      <Label fx:id="hasHorseShoesLabel" layoutX="199.0" layoutY="255.0" text="Has Horse Shoes:" visible="false" />
+      <ComboBox fx:id="hasHorseShoesCB" layoutX="298.0" layoutY="251.0" prefWidth="150.0" visible="false" />
+   </children>
+</AnchorPane>

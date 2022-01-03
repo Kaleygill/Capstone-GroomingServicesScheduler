@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="682.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AppointmentController">
+   <children>
+      <Label layoutX="394.0" layoutY="34.0" text="Appointments">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <TableView fx:id="appTable" layoutX="45.0" layoutY="143.0" prefHeight="333.0" prefWidth="837.0">
+        <columns>
+          <TableColumn fx:id="appIDCol" prefWidth="107.0" text="Appointment ID" />
+          <TableColumn fx:id="titleCol" prefWidth="59.0" text="Title" />
+            <TableColumn fx:id="DescCol" prefWidth="142.5" text="Description" />
+            <TableColumn fx:id="locCol" minWidth="4.5" prefWidth="70.5" text="Location" />
+            <TableColumn fx:id="conCol" prefWidth="82.0" text="Groomer" />
+            <TableColumn fx:id="typeCol" prefWidth="106.0" text="Type" />
+            <TableColumn fx:id="startCol" prefWidth="96.0" text="Start" />
+            <TableColumn fx:id="endCol" prefWidth="89.5" text="End" />
+            <TableColumn fx:id="cusIDCol" prefWidth="83.5" text="Customer ID" />
+        </columns>
+      </TableView>
+      <Button fx:id="addBtn" layoutX="45.0" layoutY="502.0" minWidth="133.5" mnemonicParsing="false" onAction="#addBtn" text="Add Appointments" />
+      <Button fx:id="updateBtn" layoutX="191.0" layoutY="502.0" mnemonicParsing="false" onAction="#updateBtn" text="Update Appointments" />
+      <Button fx:id="deleteBtn" layoutX="338.0" layoutY="502.0" minWidth="144.0" mnemonicParsing="false" onAction="#deleteBtn" text="Delete Appointments" />
+      <Button fx:id="customersBtn" layoutX="45.0" layoutY="539.0" minWidth="133.5" mnemonicParsing="false" onAction="#customersBtn" text="View Customers" />
+      <Button fx:id="reportsBtn" layoutX="191.0" layoutY="539.0" minWidth="133.5" mnemonicParsing="false" onAction="#reportsBtn" text="View Reports" />
+      <Button fx:id="exitBtn" layoutX="862.0" layoutY="557.0" mnemonicParsing="false" onAction="#exitBtn" text="Exit" />
+      <Label layoutX="161.0" layoutY="466.0" />
+      <Label fx:id="error" layoutX="139.0" layoutY="466.0" prefHeight="17.0" prefWidth="214.0" />
+      <Button layoutX="205.0" layoutY="75.0" mnemonicParsing="false" onAction="#buttonOne" text="Weekly Appointments" />
+      <Button layoutX="404.0" layoutY="100.0" mnemonicParsing="false" onAction="#buttonTwo" text="All Appointments" />
+      <Button layoutX="587.0" layoutY="75.0" mnemonicParsing="false" onAction="#buttonThree" text="Monthly Appointments" />
+      <Button layoutX="338.0" layoutY="539.0" minWidth="133.5" mnemonicParsing="false" onAction="#viewGroomingBtn" text="View Grooming Services" />
+      <Label layoutX="667.0" layoutY="14.0" text="Search:" />
+      <TextField fx:id="searchField" layoutX="713.0" layoutY="10.0" prefHeight="25.0" prefWidth="175.0" promptText="Appt. ID, Groomer, Customer... ID" />
+   </children>
+</AnchorPane>

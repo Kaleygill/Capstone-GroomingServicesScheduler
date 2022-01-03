@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="556.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ReportsMainController">
+   <children>
+      <TabPane layoutX="33.0" layoutY="75.0" prefHeight="436.0" prefWidth="308.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Appointment By Month">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="341.0" prefWidth="360.0" style="-fx-border-color: black;">
+                     <children>
+                        <TextArea fx:id="appointmentByMonth" layoutX="21.0" layoutY="74.0" prefHeight="313.0" prefWidth="266.0" />
+                        <Label layoutX="63.0" layoutY="14.0" text="Appointments by Type and Month" />
+                        <ComboBox fx:id="monthCB" layoutX="14.0" layoutY="38.0" onAction="#onMonth" prefHeight="25.0" prefWidth="100.0" promptText="Month" />
+                        <ComboBox fx:id="typeCB" layoutX="128.0" layoutY="38.0" onAction="#onType" prefWidth="150.0" promptText="Type" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Appointment By Type">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="383.0" prefWidth="308.0" style="-fx-border-color: black;">
+                     <children>
+                        <TextArea fx:id="appointmentByType" layoutX="21.0" layoutY="36.0" prefHeight="350.0" prefWidth="266.0" />
+                        <Label layoutX="97.0" layoutY="14.0" text="Appointment By Type" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <TabPane layoutX="385.0" layoutY="75.0" prefHeight="436.0" prefWidth="308.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Customers By Division">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: black;">
+                     <children>
+                        <TextArea fx:id="customersByDivision" layoutX="21.0" layoutY="36.0" prefHeight="350.0" prefWidth="266.0" />
+                        <Label layoutX="95.0" layoutY="14.0" text="Customers By Division" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Groomer's Schedule">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: black;">
+                     <children>
+                        <TextArea fx:id="contactSchedules" layoutX="21.0" layoutY="37.0" prefHeight="350.0" prefWidth="266.0" />
+                        <Label layoutX="105.0" layoutY="14.0" text="Groomer's Schedule" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="325.0" layoutY="30.0" text="Reports">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Button layoutX="319.0" layoutY="517.0" mnemonicParsing="false" onAction="#appointmentsBtn" text="Appointments" />
+   </children>
+</AnchorPane>
